@@ -1,0 +1,14 @@
+{
+  "name": "@trpg/storage-sqlite",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "SQLite 存储层：PRAGMA、单写者事务队列、迁移、备份、事件日志",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

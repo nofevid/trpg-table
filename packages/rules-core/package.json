@@ -1,0 +1,14 @@
+{
+  "name": "@trpg/rules-core",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "规则引擎公共底座：可注入随机源、骰子表达式、成功等级",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

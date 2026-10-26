@@ -1,0 +1,14 @@
+{
+  "name": "@trpg/rules-coc7e",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "克苏鲁的呼唤 7 版：技能表、检定、对抗、理智、伤害加成",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

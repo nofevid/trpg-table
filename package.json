@@ -1,0 +1,35 @@
+{
+  "name": "trpg-table",
+  "version": "0.0.0",
+  "private": true,
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "node --test --test-isolation=none --test-force-exit packages/pdf-core/test/real-modules.test.ts packages/storage-sqlite/test/storage.test.ts packages/rules-coc7e/test/coc7e.test.ts packages/tools/test/tools.test.ts packages/llm-gateway/test/gateway.test.ts packages/turn-batcher/test/batcher.test.ts packages/visibility/test/visibility.test.ts packages/turn-pipeline/test/pipeline.test.ts apps/server/test/server.test.ts",
+    "test:pdf": "node --test --test-isolation=none packages/pdf-core/test/real-modules.test.ts",
+    "test:storage": "node --test --test-isolation=none packages/storage-sqlite/test/storage.test.ts",
+    "test:rules": "node --test --test-isolation=none packages/rules-coc7e/test/coc7e.test.ts",
+    "test:tools": "node --test --test-isolation=none packages/tools/test/tools.test.ts",
+    "test:gateway": "node --test --test-isolation=none packages/llm-gateway/test/gateway.test.ts",
+    "test:batcher": "node --test --test-isolation=none --test-force-exit packages/turn-batcher/test/batcher.test.ts packages/visibility/test/visibility.test.ts packages/turn-pipeline/test/pipeline.test.ts",
+    "test:server": "node --test --test-isolation=none --test-force-exit apps/server/test/server.test.ts",
+    "probe": "node packages/pdf-core/scripts/probe.ts",
+    "bench:storage": "node packages/storage-sqlite/scripts/bench.ts",
+    "typecheck": "tsc -p packages/pdf-core/tsconfig.json && tsc -p packages/storage-sqlite/tsconfig.json && tsc -p packages/rules-core/tsconfig.json && tsc -p packages/rules-coc7e/tsconfig.json && tsc -p packages/tools/tsconfig.json && tsc -p packages/llm-gateway/tsconfig.json && tsc -p packages/turn-batcher/tsconfig.json && tsc -p packages/visibility/tsconfig.json && tsc -p packages/turn-pipeline/tsconfig.json && tsc -p apps/server/tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/ws": "^8.18.2",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "ws": "^8.22.0"
+  }
+}

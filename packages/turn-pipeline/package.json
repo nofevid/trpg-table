@@ -1,0 +1,14 @@
+{
+  "name": "@trpg/turn-pipeline",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "一次回合的编排：上下文 → 工具循环 → 结构化叙述 → 事件（DESIGN.md §7.4）",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

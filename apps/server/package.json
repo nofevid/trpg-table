@@ -1,0 +1,14 @@
+{
+  "name": "@trpg/server",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "内嵌服务：REST + WebSocket，跑在 utilityProcess 里",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

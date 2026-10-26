@@ -1,0 +1,31 @@
+# 换行统一为 LF，跨机器一致（本机 core.autocrlf 是本地配置，换台机器就丢）
+* text=auto eol=lf
+
+# ── 二进制：不做文本转换，也不看 diff ────────────────────────────
+# mod-example/ 里的模组、将来的 SQLite 库与打包产物都归这里
+*.pdf   binary
+*.docx  binary
+*.zip   binary
+*.7z    binary
+*.db    binary
+*.db-wal binary
+*.db-shm binary
+*.sqlite binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.gif   binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.otf   binary
+
+# ── Windows 脚本必须 CRLF，否则 cmd.exe 会读坏 ────────────────────
+*.cmd   text eol=crlf
+*.bat   text eol=crlf
+*.ps1   text eol=crlf
+
+# ── 生成物：不展示 diff，避免评审时刷屏 ──────────────────────────
+package-lock.json -diff linguist-generated

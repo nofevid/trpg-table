@@ -1,0 +1,67 @@
+# ── 依赖与构建产物 ────────────────────────────────────────────────
+node_modules/
+dist/
+out/
+release/
+build/
+*.tsbuildinfo
+
+# ── 包管理缓存与锁文件 ────────────────────────────────────────────
+# 仓库用 npm（pnpm 12 的 store 锁在本环境必然 EPERM）
+.npm-cache/
+.pnpm-store/
+pnpm-lock.yaml
+
+# ── 测试与覆盖率 ──────────────────────────────────────────────────
+coverage/
+*.lcov
+.vitest/
+.nyc_output/
+
+# ── 运行期数据（SQLite 库、WAL、备份快照）────────────────────────
+# 真实数据在 %APPDATA%\TrpgTable，仓库里出现的都是本地临时库
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+backups/
+data/
+.local/
+
+# ── 日志与临时文件 ────────────────────────────────────────────────
+*.log
+*.tmp
+tmp/
+.tmp/
+*.pid
+*.lock
+
+# ── 本地配置与密钥（DPAPI 存的是 secrets.bin，别提交任何 Key）──────
+.env
+.env.*
+!.env.example
+secrets.bin
+*.pem
+*.pfx
+
+# ── Python 验证脚本的产物（tools/ 只有源码入库）──────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ── 编辑器与系统 ──────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# ── 模组样例：有版权，不入库（见 README「准备两份模组」）──────────
+mod-example/
+
+# ── ACL 修复的临时备份，不入库 ────────────────────────────────────
+.acl-recovery/

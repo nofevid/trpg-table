@@ -1,0 +1,14 @@
+{
+  "name": "@trpg/llm-gateway",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "上下文装填、预算守卫与工具循环（双平面里的叙事平面）",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}
